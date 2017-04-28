@@ -19,7 +19,7 @@ Before flashing, I'd recommend you to turn on Nordic Packet ACKs using the "Set 
 
 ![DLC Flashing in fluffd-client](../img/flashdlc.png)
 
-For actually downloading the DLC, you have to choose "Flash DLC file" in fluffd-client and enter the DLC filename (this one gets transferred to the Furby, I'm not sure what it is used for, maybe the Connect World App just uses it to identify different DLC file versions) and the file system path to your DLC file. If you modify a DLC file, just keep the filename and change the path to your own file.
+For actually downloading the DLC, you have to choose "Flash DLC file" in fluffd-client and enter the DLC filename *in uppercase* (this one gets transferred to the Furby, I'm not sure what it is used for, maybe the Connect World App just uses it to identify different DLC file versions) and the file system path to your DLC file. If you modify a DLC file, just keep the filename and change the path to your own file.
 
 After hitting send, fluffd should send a `0x50` command with your file's parameters to the Furby, to which Furby will respond with a GeneralPlus notification `2402` when ready to receive. After that, you will see a stream of data interrupted by Furby's Nordic ACK packets. Depending on your DLC file size, this process will take **3-5 Minutes**. Furby should display a `1` in the debug menu.
 
